@@ -12,12 +12,16 @@ __CSS__
 <body>
 
 <h1>__TITLE__</h1>
-<h2>Choose your nickname</h2>
+<h2>__NICK__</h2>
+
+<p>
+__TEXT__
+</p>
 
 <div>
-<form action=desc.pl method=post>
-<input class=button type=text name=nick size=30>
-<input class=button type=submit name=submit value="start survey">
+<form action=choose.pl method=post>
+<input class=button type=submit name=submit value="start">
+<input class=hidden type=text name=nick value=__NICK__>
 </form>
 </div>
 

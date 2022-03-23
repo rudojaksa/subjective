@@ -1,0 +1,5 @@
+0.2 - added left/right CSV column
+    - added CSV header
+    - added the survey description page
+    - added switch to synchronize A and B images selection
+    - added choosing-time CSV column 

@@ -35,7 +35,32 @@ nickname and other data from one evaluation page to other.
  6. run the survey with a set of participants
  7. collect the CSV (SSV) outputs from the `app/out/` directory
 
-#### APACHE CONFIGURATION
+### CONFIGURATION
+
+The attributes in configuration file `index.cfg` are:
+
+ * **title** - the title of survey
+ * **question** - the question to be displayed for every selection page
+ * **dira** - path to the directory with images for the A set 
+ * **dirb** - path to the B set images 
+ * **output** - path to tho output directory (must be writable by html daemon) 
+ * **rounds** - number of rounds of survey 
+ * **sync** - true/false whether to select corresponding random images from A and B 
+ * **showimg** - false (true to debug-display image names) 
+ * **showab** - false (true to debug-display A/B) 
+
+### CSV COLUMNS
+
+Prameters saved in CSV files are:
+
+ * **id** - the round number
+ * **ab** - A or B was chosen
+ * **lr** - left or right image was chosen
+ * **sec** - how many seconds the choice took
+ * **imga** - the A image which was present
+ * **imgb** - the B image which was present
+
+### APACHE CONFIGURATION
 
 Use something like this to configure apache to run perl CGI scripts from the
 `/www` directory: (so you can copy or symlink the `app/` directory into `/www`

@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# get cgi form values (POST)
+# read the config file
 for(split /\n/,`cat index.cfg`) {
   $CONF{$1}=$2 if $_=~/^\h*(.*?):\h*(.*?)\h*$/; }
 
