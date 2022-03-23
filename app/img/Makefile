@@ -14,5 +14,9 @@ A B:
 	mkdir -p $@
 
 clean:
+	@echo "clean the A & B manually"; echo
+	@ls -l A B
+
+mrproper:
 	rm -rf A B
 
